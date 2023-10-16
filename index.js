@@ -12,7 +12,7 @@ app.use("/", route);
 mongoose
   .connect(`${process.env.dbUrl}/${process.env.dbName}`)
   .then(() => {
-    app.listen(8000, () => console.log("Server is listening in port 8000"));
+    app.listen(PORT, () => console.log(`Server is listening in port ${PORT}`));
   })
   .catch((error) => {
     console.log("Failed to connect Db", error, `${process.env.dbUrl}/${process.env.dbName}`);
